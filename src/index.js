@@ -13,5 +13,5 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(3000, () => { 
     console.log(`Listening http://localhost:3000`);
-    console.log(process.env.PASS);
+    console.log(process.env.PASS, process.env.EMAIL);
 })

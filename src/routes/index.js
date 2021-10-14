@@ -24,8 +24,8 @@ router.post('/send-email', async  (req, res) => {
         port: 587,
         secure: false,
         auth: {
-            user: config.mail,
-            pass: config.pass
+            user: process.env.EMAIL,
+            pass: process.env.PASS
         },
         tls:{
             rejectUnauthorized: false
@@ -34,9 +34,9 @@ router.post('/send-email', async  (req, res) => {
 
     const info = await transporter.sendMail({
         from: "'From ' <miguelbercru27@gmail.com>",
-        to: "miguelbercru27@gmail.com",
+        to: "miguelbercru27@outlook.com",
         subject:  "Hola",
-        text: "hello world"
+        html: contentHtml
     });
 
     console.log('Message send', info.messageId);
