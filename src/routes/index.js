@@ -40,7 +40,6 @@ router.post('/send-email', async  (req, res) => {
     });
 
     console.log('Message send', info.messageId);
-    res.redirect('/sucess.html');
 })
 
 module.exports = router;
