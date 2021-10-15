@@ -34,7 +34,7 @@ router.post('/send-email', async  (req, res) => {
 
     const info = await transporter.sendMail({
         from: "'From ' <miguelbercru27@gmail.com>",
-        to: "miguelbercru27@outlook.com",
+        to: "miguelbercru27@gmail.com",
         subject:  "Hola",
         html: contentHtml
     });
