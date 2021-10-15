@@ -7,7 +7,7 @@ require('dotenv').config();
 
 router.post('/send-email', async  (req, res) => {
     const { name, email, message } = req.body;
-
+    console.log("Ingresó");
     contentHtml = `
         <h1>Información del usuario</h1>
         <ul>
@@ -39,6 +39,7 @@ router.post('/send-email', async  (req, res) => {
         html: contentHtml
     });
 
+    res.redirect('/sucess.html');
     console.log('Message send', info.messageId);
 })
 
